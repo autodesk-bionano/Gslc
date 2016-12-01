@@ -1,0 +1,11 @@
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/obj/Release/.NETFramework,Version=v4.5.1.AssemblyAttribute.fs
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/Gslc.exe
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/obj/Release/Gslc.exe
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/Amyris.Bio.dll
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/FParsec.dll
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/FParsecCS.dll
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/FSharp.Data.dll
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/FsLexYacc.Runtime.dll
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/GslCore.dll
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/MathNet.Numerics.dll
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/src/Gslc/bin/Release/Newtonsoft.Json.dll

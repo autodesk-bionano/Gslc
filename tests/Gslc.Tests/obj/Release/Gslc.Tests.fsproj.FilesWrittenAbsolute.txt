@@ -1,0 +1,3 @@
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/tests/Gslc.Tests/obj/Release/.NETFramework,Version=v4.5.1.AssemblyAttribute.fs
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/tests/Gslc.Tests/bin/Release/Gslc.Tests.dll
+/Users/t_khilr/dev/GSL-Impl/repos/NewGSL/forks/Gslc/tests/Gslc.Tests/obj/Release/Gslc.Tests.dll
