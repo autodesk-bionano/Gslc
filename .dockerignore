@@ -169,9 +169,6 @@ $RECYCLE.BIN/
 # NuGet Packages Directory
 packages/
 
-# Generated documentation folder
-docs/output/
-
 # Temp folder used for publishing docs
 temp/
 
@@ -186,17 +183,24 @@ localpackages/
 paket-files
 *.orig
 .paket/paket.exe
-docs/content/license.md
-docs/content/release-notes.md
 .fake
-docs/tools/FSharp.Formatting.svclog
 paket.local
 
 #Build output
 src/Gslc/Gslc.sln
 
-#Docker build output
+# Docker related files
+.git
+.gitignore
+.dockerignore
+docker*
+Docker*
+build-docker-image.sh
+out
+etc/
+tests/primers
 tmpDockerBuild/
 tmpTestOut/
 compiledbinaries/
+.gitignore
 

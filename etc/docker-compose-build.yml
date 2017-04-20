@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  gsl:
+    image: "mono:4.8.0.495"
+    command: [ "./build.sh" ]
+    working_dir: "/app"
+    volumes:
+      - ../:/app
+      - ../binaries:/app/src/Gslc/bin/Release/

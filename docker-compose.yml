@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+
+  gsl:
+    # build:
+    #   context: "."
+    image: "mono:4.8.0.495"
+    # command: [ "mono",  "./TestingConsoleApp.exe" ]
+    command: [ "./build.sh" ]
+    working_dir: "/app"
+    volumes:
+      - ./:/app
