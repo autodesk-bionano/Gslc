@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Builds the minimal docker image with the GSL binaries installed
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+if [ ! -d $DIR/Gslc ]; then
+	echo "$DIR/Gslc not there"
+	cd $DIR
+	git clone --branch master-build git@github.com:autodesk-lifesciences/Gslc.git
+fi
+
+GSLC="$DIR/Gslc"
+COMAND="docker run --rm -ti -v $GSLC/bin/Gslc:/gslc -v $GSLC/bin/gslc_lib:/gslc_lib -e 'GSL_LIB=/gslc_lib'  mono:4.8.0.495 mono /gslc/Gslc.exe"
+eval "$COMAND --version"
+eval "$COMAND"
+# eval "$COMAND --helpPragmas"
