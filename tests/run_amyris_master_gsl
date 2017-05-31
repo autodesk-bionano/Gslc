@@ -7,14 +7,11 @@ GSLC_AMYRIS="GslcAmyris"
 if [ ! -d $DIR/$GSLC_AMYRIS ]; then
 	echo "$DIR/$GSLC_AMYRIS not there"
 	cd $DIR
-	git clone --branch master-build git@github.com:autodesk-lifesciences/Gslc.git $GSLC_AMYRIS
+	git clone git@github.com:AmyrisInc/Gslc.git $GSLC_AMYRIS
 fi
 
 cd $DIR/$GSLC_AMYRIS
 cp ../../Dockerfile .
-
-
-# GSLC="$DIR/$GSLC_AMYRIS"
 
 # Get the version
 GIT_TAG=`git rev-parse HEAD`
@@ -24,14 +21,9 @@ fi
 GIT_TAG=${GIT_TAG:0:8}
 VERSION=$GIT_TAG
 
-
-# cd $GSLC
 DOCKER_IMAGE="gsl_amyris:$VERSION"
 docker build -t $DOCKER_IMAGE .
 
-
-
-# COMAND="docker run --rm -ti -v $GSLC/bin/Gslc:/gslc -v $GSLC/bin/gslc_lib:/gslc_lib -e 'GSL_LIB=/gslc_lib'  mono:4.8.0.495 mono /gslc/Gslc.exe"
+COMAND="docker run --rm -ti $DOCKER_IMAGE find / -iname Gslc.exe"
 # eval "$COMAND --version"
-# eval "$COMAND"
-# eval "$COMAND --helpPragmas"
+eval "$COMAND"
