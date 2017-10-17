@@ -69,25 +69,4 @@ EOF
 cp -r ./gslc_lib $OUTPUT_DIR/
 cd $OUTPUT_DIR/
 docker build -t "$REPO_NAME:$PACKAGE_VERSION" .
-echo "$REPO_NAME:$PACKAGE_VERSION"
-
-##################################################################
-#If DOCKER_REGISTRY, DOCKER_USER, and DOCKER_PASSWORD are given
-#then login to the DOCKER_REGISTRY, and upload the image
-##################################################################
-
-echo "DOCKER_USER=$DOCKER_USER"
-echo "DOCKER_REGISTRY=$DOCKER_REGISTRY"
-
-if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ ! -z  $DOCKER_USER ] && [ ! -z  $DOCKER_PASSWORD ] && [ ! -z  $DOCKER_REGISTRY ]; then
-	docker login --username $DOCKER_USER --password $DOCKER_PASSWORD $DOCKER_REGISTRY
-
-	#quay.io robot accounts are the name+robotname. We need to cut
-	#the "+robotname" off for naming the image
-	DOCKER_IMAGE_USER=$(echo "$DOCKER_USER" | sed 's/+.*//')
-	echo "DOCKER_IMAGE_USER=$DOCKER_IMAGE_USER"
-
-	docker tag $REPO_NAME:$PACKAGE_VERSION $DOCKER_REGISTRY/$DOCKER_IMAGE_USER/$REPO_NAME:$PACKAGE_VERSION
-	echo "Pushing $DOCKER_REGISTRY/$DOCKER_IMAGE_USER/$REPO_NAME:$PACKAGE_VERSION"
-	docker push $DOCKER_REGISTRY/$DOCKER_IMAGE_USER/$REPO_NAME:$PACKAGE_VERSION
-fi
+echo "Finished building $REPO_NAME:$PACKAGE_VERSION"
